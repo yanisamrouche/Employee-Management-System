@@ -3,18 +3,18 @@ package com.example.project;
 import java.util.Date;
 
 public class Employee {
-    private Integer id;
+    private int id;
     private String nom;
     private String prenom;
     private String adresse;
     private Date an;
     private String ln;
-    private Integer age;
+    private int age;
     private String fonction;
     private double Salaire;
 
-    public Employee(Integer id, String nom, String prenom, String adresse,
-                    Date an, String ln, Integer age, String fonction, double salaire) {
+    public Employee(int id, String nom, String prenom, String adresse,
+                    Date an, String ln, int age, String fonction, double salaire) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -26,7 +26,7 @@ public class Employee {
         Salaire = salaire;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
@@ -50,7 +50,7 @@ public class Employee {
         return ln;
     }
 
-    public Integer getAge() {
+    public int getAge() {
         return age;
     }
 
