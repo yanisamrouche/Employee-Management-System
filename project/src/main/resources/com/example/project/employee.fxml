@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="2077.0" style="-fx-background-color: #008B8B;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.EmployeeController">
+   <children>
+      <VBox layoutX="14.0" layoutY="34.0" prefHeight="471.0" prefWidth="170.0" spacing="30.0">
+         <children>
+            <Label prefHeight="40.0" prefWidth="22.0" text="ID" />
+            <Label prefHeight="31.0" prefWidth="54.0" text="Nom" />
+            <Label prefHeight="33.0" prefWidth="56.0" text="Prénom" />
+            <Label prefHeight="60.0" prefWidth="53.0" text="Adresse" />
+            <Label prefHeight="55.0" prefWidth="121.0" text="Date de naissance" />
+            <Label prefHeight="46.0" prefWidth="142.0" text="Lieu de naissance" />
+            <Label prefHeight="39.0" prefWidth="26.0" text="Age" />
+            <Label prefHeight="40.0" prefWidth="56.0" text="Fonction" />
+             <Label prefHeight="16.0" prefWidth="111.0" text="Organisme" />
+             <Label prefHeight="24.0" prefWidth="200.0" text="Numéro de sécurité sociale" />
+             <Label prefHeight="44.0" prefWidth="146.0" text="Numéro de compte" />
+            <Label prefHeight="24.0" prefWidth="51.0" text="Salaire" />
+         </children>
+      </VBox>
+      <VBox layoutX="204.0" layoutY="34.0" prefHeight="513.0" prefWidth="372.0" spacing="20.0">
+         <children>
+            <TextField fx:id="tfId" prefHeight="30.0" prefWidth="365.0" />
+            <TextField fx:id="tfNom" />
+            <TextField fx:id="tfPrenom" />
+            <TextField fx:id="tfAdresse" />
+            <TextField fx:id="tfAN" />
+            <TextField fx:id="tfLN" />
+            <TextField fx:id="tfAge" />
+            <TextField fx:id="tfFonction" />
+             <TextField fx:id="tfOrganisme" />
+             <TextField fx:id="tfNumSecu" />
+             <TextField fx:id="tfNumCompte" />
+            <TextField fx:id="tfSalaire" />
+         </children>
+      </VBox>
+      <TableView fx:id="tvEmp" layoutX="607.0" layoutY="27.0" onMouseClicked="#displayFromTableView" prefHeight="720.0" prefWidth="1460.0">
+        <columns>
+            <TableColumn fx:id="col_id" prefWidth="54.0" text="ID" />
+            <TableColumn fx:id="colNom" prefWidth="96.0" text="Nom" />
+            <TableColumn fx:id="colPrenom" prefWidth="86.0" text="Prénom" />
+            <TableColumn fx:id="colAdresse" prefWidth="105.0" text="Adresse" />
+            <TableColumn fx:id="colAN" prefWidth="122.0" text="A/N" />
+            <TableColumn fx:id="colLN" minWidth="7.0" prefWidth="124.0" text="L/N" />
+            <TableColumn fx:id="colAge" prefWidth="112.0" text="Age" />
+            <TableColumn fx:id="colFonction" prefWidth="123.0" text="Fonction" />
+            <TableColumn fx:id="colOrganisme" prefWidth="146.0" text="Organisme" />
+            <TableColumn fx:id="colNumSecu" minWidth="0.0" prefWidth="225.0" text="Numéro de sécurité sociale" />
+            <TableColumn fx:id="colNumCompte" prefWidth="185.0" text="Numéro de compte" />
+            <TableColumn fx:id="colSalaire" prefWidth="82.0" text="Salaire" />
+            
+        </columns>
+
+      </TableView>
+      <Button fx:id="btnAjt" layoutX="222.0" layoutY="635.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="37.0" prefWidth="111.0" text="Ajouter" />
+      <Button fx:id="btnModif" layoutX="352.0" layoutY="635.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="37.0" prefWidth="111.0" text="Modifier" />
+      <Button fx:id="btnSupp" layoutX="479.0" layoutY="635.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="37.0" prefWidth="100.0" text="Supprimer" />
+      <Button fx:id="btnV" layoutX="545.0" layoutY="579.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="31.0" text="V" />
+
+   </children>
+</AnchorPane>

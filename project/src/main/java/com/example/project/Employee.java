@@ -11,10 +11,13 @@ public class Employee {
     private String ln;
     private int age;
     private String fonction;
+    private String organisme;
+    private int numSecu;
+    private int numCompte;
     private double Salaire;
 
-    public Employee(int id, String nom, String prenom, String adresse,
-                    Date an, String ln, int age, String fonction, double salaire) {
+    public Employee(int id, String nom, String prenom, String adresse, Date an, String ln, int age,
+                    String fonction, String organisme, int numSecu, int numCompte, double salaire) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -23,6 +26,9 @@ public class Employee {
         this.ln = ln;
         this.age = age;
         this.fonction = fonction;
+        this.organisme = organisme;
+        this.numSecu = numSecu;
+        this.numCompte = numCompte;
         Salaire = salaire;
     }
 
@@ -56,6 +62,18 @@ public class Employee {
 
     public String getFonction() {
         return fonction;
+    }
+
+    public String getOrganisme() {
+        return organisme;
+    }
+
+    public int getNumSecu() {
+        return numSecu;
+    }
+
+    public int getNumCompte() {
+        return numCompte;
     }
 
     public double getSalaire() {

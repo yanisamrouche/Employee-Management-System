@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 
 public class EmployeeController implements Initializable {
 
-    private Label label;
+
     /********************* TextFields *****************/
     @FXML
     TextField tfId;
@@ -33,6 +33,12 @@ public class EmployeeController implements Initializable {
     TextField tfAge;
     @FXML
     TextField tfFonction;
+    @FXML
+    TextField tfOrganisme;
+    @FXML
+    TextField tfNumSecu;
+    @FXML
+    TextField tfNumCompte;
     @FXML
     TextField tfSalaire;
 
@@ -57,6 +63,12 @@ public class EmployeeController implements Initializable {
     @FXML
     TableColumn<Employee,String> colFonction ;
     @FXML
+    TableColumn<Employee, String> colOrganisme;
+    @FXML
+    TableColumn<Employee, Integer> colNumSecu;
+    @FXML
+    TableColumn<Employee, Integer> colNumCompte;
+    @FXML
     TableColumn<Employee, Double> colSalaire ;
     /********************* Buttons *****************/
     @FXML
@@ -65,6 +77,8 @@ public class EmployeeController implements Initializable {
     Button btnModif;
     @FXML
     Button btnSupp;
+    @FXML
+    Button btnV;
 
     /********************* Methods *****************/
 
@@ -80,6 +94,9 @@ public class EmployeeController implements Initializable {
         else if(event.getSource() == btnSupp){
             deleteEmployee();
         }
+        else if(event.getSource() == btnV){
+            clearData();
+        }
     }
 
     @Override
@@ -87,7 +104,7 @@ public class EmployeeController implements Initializable {
         showEmployees();
     }
 
-    public Connection getConnection(){
+    public static Connection getConnection(){
         Connection connection;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -108,7 +125,7 @@ public class EmployeeController implements Initializable {
             rs = st.executeQuery(query);
             Employee employees;
             while (rs.next()){
-                employees = new Employee(rs.getInt("id"), rs.getString("nom"), rs.getString("prenom"), rs.getString("adresse"), rs.getDate("an"), rs.getString("ln"),rs.getInt("age"),rs.getString("fonction"), rs.getDouble("salaire"));
+                employees = new Employee(rs.getInt("id"), rs.getString("nom"), rs.getString("prenom"), rs.getString("adresse"), rs.getDate("an"), rs.getString("ln"),rs.getInt("age"),rs.getString("fonction"),rs.getString("organisme"),rs.getInt("numSecu"),rs.getInt("numCompte"), rs.getDouble("salaire"));
                 employeelist.add(employees);
             }
 
@@ -137,12 +154,18 @@ public class EmployeeController implements Initializable {
                 (new PropertyValueFactory<Employee, Integer>("age"));
         colFonction.setCellValueFactory
                 (new PropertyValueFactory<Employee, String>("fonction"));
+        colOrganisme.setCellValueFactory
+                (new PropertyValueFactory<Employee, String>("organisme"));
+        colNumSecu.setCellValueFactory
+                (new PropertyValueFactory<Employee, Integer>("numSecu"));
+        colNumCompte.setCellValueFactory
+                (new PropertyValueFactory<Employee, Integer>("numCompte"));
         colSalaire.setCellValueFactory
                 (new PropertyValueFactory<Employee, Double>("salaire"));
         tvEmp.setItems(list);
     }
 
-    public void executeQuery(String query){
+    public static void executeQuery(String query){
         Connection connection = getConnection();
         Statement statement;
         try{
@@ -163,7 +186,10 @@ public class EmployeeController implements Initializable {
                 "','" + tfLN.getText() +
                 "'," + tfAge.getText() +
                 ",'" + tfFonction.getText() +
-                "','" + tfSalaire.getText() +"')";
+                ",'" + tfOrganisme.getText() +
+                "," + tfNumSecu.getText() +
+                "," + tfNumCompte.getText() +
+                ",'" + tfSalaire.getText() +"')";
         executeQuery(query);
         showEmployees();
     }
@@ -177,6 +203,9 @@ public class EmployeeController implements Initializable {
                 ", ln = '" + tfLN.getText() + "'" +
                 ", age = '" + tfAge.getText() + "'" +
                 ", fonction = '" + tfFonction.getText() + "'" +
+                ", organisme = '" + tfOrganisme.getText() + "'" +
+                ", numSecu = '" + tfNumSecu.getText() + "'" +
+                ", numCompte = '" + tfNumCompte.getText() + "'" +
                 ", salaire = '" + tfSalaire.getText() +"'" +
                 "WHERE id = "+ tfId.getText() + "";
         executeQuery(query);
@@ -196,6 +225,9 @@ public class EmployeeController implements Initializable {
         tfLN.setText("");
         tfAge.setText("");
         tfFonction.setText("");
+        tfOrganisme.setText("");
+        tfNumSecu.setText("");
+        tfNumCompte.setText("");
         tfSalaire.setText("");
     }
 
@@ -211,9 +243,29 @@ public class EmployeeController implements Initializable {
             tfLN.setText(employee.getLn());
             tfAge.setText(String.valueOf(employee.getAge()));
             tfFonction.setText(employee.getFonction());
+            tfOrganisme.setText(employee.getOrganisme());
+            tfNumSecu.setText(String.valueOf(employee.getNumSecu()));
+            tfNumCompte.setText(String.valueOf(employee.getNumCompte()));
             tfSalaire.setText(String.valueOf(employee.getSalaire()));
         }
     }
+
+    public void clearData(){
+        tfId.setText("");
+        tfNom.setText("");
+        tfPrenom.setText("");
+        tfAdresse.setText("");
+        tfAN.setText("");
+        tfLN.setText("");
+        tfAge.setText("");
+        tfFonction.setText("");
+        tfOrganisme.setText("");
+        tfNumSecu.setText("");
+        tfNumCompte.setText("");
+        tfSalaire.setText("");
+    }
+
+
 
 
 

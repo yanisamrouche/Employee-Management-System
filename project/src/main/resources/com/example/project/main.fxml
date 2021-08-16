@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="642.0" prefWidth="540.0" style="-fx-background-color: #008D8D;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Main">
+   <children>
+      <VBox layoutX="99.0" layoutY="74.0" prefHeight="418.0" prefWidth="353.0" spacing="100.0">
+         <children>
+            <Button fx:id="btn_employee" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="70.0" prefWidth="400.0" text="Employées">
+               <font>
+                  <Font name="Uroob Regular" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_alloc" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="70.0" prefWidth="400.0" text="Salaire">
+               <font>
+                  <Font name="Uroob Regular" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_bulletin" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="70.0" prefWidth="400.0" text="Bulletin de paie">
+               <font>
+                  <Font name="Uroob Regular" size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
