@@ -3,9 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="683.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Salary">
+<AnchorPane prefHeight="724.0" prefWidth="1116.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.Salary">
     <children>
-    <VBox layoutX="192.0" layoutY="148.0" prefHeight="551.0" prefWidth="403.0" spacing="35.0">
+    <VBox layoutX="185.0" layoutY="148.0" prefHeight="570.0" prefWidth="335.0" spacing="35.0">
         <children>
             <TextField fx:id="tfNom" />
             <TextField fx:id="tfPrenom" />
@@ -15,24 +15,37 @@
             <TextField fx:id="tfAge" />
             <TextField fx:id="tfFonction" />
             <TextField fx:id="tfOrganisme" />
-            <TextField fx:id="tfSalaire" />
+            <TextField fx:id="tfSalaire" prefHeight="30.0" prefWidth="403.0" />
         </children>
     </VBox>
       <VBox layoutX="137.0" layoutY="43.0" prefHeight="38.0" prefWidth="451.0">
          <children>
-            <TextField fx:id="tfRech" prefHeight="36.0" prefWidth="395.0" />
+            <TextField fx:id="tfRech" prefHeight="36.0" prefWidth="519.0" />
          </children>
       </VBox>
-      <Label layoutX="13.0" layoutY="35.0" prefHeight="46.0" prefWidth="121.0" text="Recherche par ID" />
+      <Label layoutX="134.0" layoutY="-12.0" prefHeight="74.0" prefWidth="252.0" text="Recherche par ID ou par nom-prenom" />
       <Button fx:id="btn_rech" layoutX="593.0" layoutY="46.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="51.0" text="R" />
       <Label layoutX="108.0" layoutY="148.0" prefHeight="26.0" prefWidth="65.0" text="Nom" />
       <Label layoutX="101.0" layoutY="213.0" prefHeight="26.0" prefWidth="73.0" text="Prénom" />
       <Label layoutX="104.0" layoutY="265.0" prefHeight="36.0" prefWidth="73.0" text="Adresse" />
-      <Label layoutX="60.0" layoutY="315.0" prefHeight="53.0" prefWidth="137.0" text="Date de naissance" />
-      <Label layoutX="62.0" layoutY="386.0" prefHeight="38.0" prefWidth="156.0" text="Lieu de naissance" />
-      <Label layoutX="114.0" layoutY="443.0" prefHeight="38.0" prefWidth="65.0" text="Age" />
-      <Label layoutX="99.0" layoutY="522.0" prefHeight="16.0" prefWidth="73.0" text="Fonction" />
-      <Label layoutX="93.0" layoutY="576.0" prefHeight="26.0" prefWidth="101.0" text="Organisme" />
-      <Label layoutX="128.0" layoutY="641.0" prefHeight="26.0" prefWidth="53.0" text="Salaire" />
+      <Label layoutX="60.0" layoutY="305.0" prefHeight="53.0" prefWidth="137.0" text="Date de naissance" />
+      <Label layoutX="62.0" layoutY="376.0" prefHeight="38.0" prefWidth="156.0" text="Lieu de naissance" />
+      <Label layoutX="114.0" layoutY="433.0" prefHeight="38.0" prefWidth="65.0" text="Age" />
+      <Label layoutX="99.0" layoutY="502.0" prefHeight="16.0" prefWidth="73.0" text="Fonction" />
+      <Label layoutX="93.0" layoutY="556.0" prefHeight="26.0" prefWidth="101.0" text="Organisme" />
+      <Label layoutX="117.0" layoutY="620.0" prefHeight="26.0" prefWidth="53.0" text="Salaire " />
+      <Label layoutX="605.0" layoutY="136.0" prefHeight="45.0" prefWidth="189.0" text="Mettre à jour le salaire par : " />
+      <RadioButton fx:id="rbtn_pourcentage" layoutX="798.0" layoutY="145.0" mnemonicParsing="false" onAction="#handleRadioButtonActionPoucentage" prefHeight="30.0" prefWidth="123.0" text="Pourcentage" />
+      <RadioButton fx:id="rbtn_montant" layoutX="926.0" layoutY="143.0" mnemonicParsing="false" onAction="#handleRadioButtonActionAmount" prefHeight="36.0" prefWidth="109.0" text="Montant" />
+      <Label layoutX="606.0" layoutY="179.0" prefHeight="45.0" prefWidth="129.0" text="Pourcentage" />
+      <TextField fx:id="tfPourcentage" layoutX="696.0" layoutY="190.0" prefHeight="26.0" prefWidth="79.0" />
+      <TextField fx:id="tfMontant" layoutX="901.0" layoutY="191.0" prefHeight="26.0" prefWidth="123.0" />
+      <Label layoutX="780.0" layoutY="191.0" prefHeight="26.0" prefWidth="33.0" text="\%" />
+      <Label layoutX="835.0" layoutY="188.0" prefHeight="30.0" prefWidth="65.0" text="Montant" />
+      <Button fx:id="btn_eng" layoutX="803.0" layoutY="344.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="36.0" prefWidth="129.0" text="Enregistrer" />
+      <Button fx:id="btn_calcul" layoutX="651.0" layoutY="344.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="36.0" prefWidth="129.0" text="Calcul" />
+      <Button fx:id="btn_v" layoutX="967.0" layoutY="347.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="27.0" text="V" />
+      <Label layoutX="606.0" layoutY="276.0" prefHeight="38.0" prefWidth="196.0" text="Salaire aprés la mise à jour : " />
+      <Label fx:id="label_salaire" layoutX="802.0" layoutY="278.0" prefHeight="30.0" prefWidth="101.0" text="0" />
     </children>
 </AnchorPane>

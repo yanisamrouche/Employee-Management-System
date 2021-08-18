@@ -3,9 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="2077.0" style="-fx-background-color: #008B8B;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.EmployeeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="2092.0" style="-fx-background-color: #008B8B;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.EmployeeController">
    <children>
-      <VBox layoutX="14.0" layoutY="34.0" prefHeight="471.0" prefWidth="170.0" spacing="30.0">
+      <VBox layoutX="14.0" layoutY="34.0" prefHeight="532.0" prefWidth="186.0" spacing="30.0">
          <children>
             <Label prefHeight="40.0" prefWidth="22.0" text="ID" />
             <Label prefHeight="31.0" prefWidth="54.0" text="Nom" />
@@ -16,12 +16,12 @@
             <Label prefHeight="39.0" prefWidth="26.0" text="Age" />
             <Label prefHeight="40.0" prefWidth="56.0" text="Fonction" />
              <Label prefHeight="16.0" prefWidth="111.0" text="Organisme" />
-             <Label prefHeight="24.0" prefWidth="200.0" text="Numéro de sécurité sociale" />
+             <Label prefHeight="16.0" prefWidth="189.0" text="Numéro de sécurité sociale" />
              <Label prefHeight="44.0" prefWidth="146.0" text="Numéro de compte" />
-            <Label prefHeight="24.0" prefWidth="51.0" text="Salaire" />
+            <Label prefHeight="16.0" prefWidth="78.0" text="Salaire " />
          </children>
       </VBox>
-      <VBox layoutX="204.0" layoutY="34.0" prefHeight="513.0" prefWidth="372.0" spacing="20.0">
+      <VBox layoutX="208.0" layoutY="34.0" prefHeight="532.0" prefWidth="370.0" spacing="20.0">
          <children>
             <TextField fx:id="tfId" prefHeight="30.0" prefWidth="365.0" />
             <TextField fx:id="tfNom" />
@@ -37,7 +37,7 @@
             <TextField fx:id="tfSalaire" />
          </children>
       </VBox>
-      <TableView fx:id="tvEmp" layoutX="607.0" layoutY="27.0" onMouseClicked="#displayFromTableView" prefHeight="720.0" prefWidth="1460.0">
+      <TableView fx:id="tvEmp" layoutX="607.0" layoutY="27.0" onMouseClicked="#displayFromTableView" prefHeight="722.0" prefWidth="1475.0">
         <columns>
             <TableColumn fx:id="col_id" prefWidth="54.0" text="ID" />
             <TableColumn fx:id="colNom" prefWidth="96.0" text="Nom" />
@@ -50,7 +50,7 @@
             <TableColumn fx:id="colOrganisme" prefWidth="146.0" text="Organisme" />
             <TableColumn fx:id="colNumSecu" minWidth="0.0" prefWidth="225.0" text="Numéro de sécurité sociale" />
             <TableColumn fx:id="colNumCompte" prefWidth="185.0" text="Numéro de compte" />
-            <TableColumn fx:id="colSalaire" prefWidth="82.0" text="Salaire" />
+            <TableColumn fx:id="colSalaire" prefWidth="96.0" text="Salaire " />
             
         </columns>
 
