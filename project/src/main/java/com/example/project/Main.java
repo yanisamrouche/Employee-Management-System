@@ -39,7 +39,10 @@ public class Main {
 
         }else if(event.getSource() == btn_bulletin){
             //TODO
-
+            Scene scene2 = new Scene(FXMLLoader.load(EmployeeApplication.class.getResource("salarySlip.fxml")));
+            Stage stage = new Stage();
+            stage.setScene(scene2);
+            stage.show();
         }
 
     }
